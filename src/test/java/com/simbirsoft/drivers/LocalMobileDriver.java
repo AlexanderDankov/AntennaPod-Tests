@@ -12,8 +12,7 @@ import java.net.URL;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class EmulatorMobileDriver implements WebDriverProvider {
-
+public class LocalMobileDriver implements WebDriverProvider {
     public static URL getAppiumServerUrl() {
         try {
             return new URL("http://localhost:4723/wd/hub");
@@ -27,15 +26,14 @@ public class EmulatorMobileDriver implements WebDriverProvider {
     public WebDriver createDriver(@Nonnull DesiredCapabilities desiredCapabilities) {
 
         desiredCapabilities.setCapability("platformName", "android");
-        desiredCapabilities.setCapability("deviceName", "Pixel 4 API 30");
-        desiredCapabilities.setCapability("version", "11.0");
+        desiredCapabilities.setCapability("deviceName", "bf6136ad");
+        desiredCapabilities.setCapability("version", "12.0");
         desiredCapabilities.setCapability("locale", "en");
         desiredCapabilities.setCapability("language", "en");
         desiredCapabilities.setCapability("appPackage", "de.danoeh.antennapod");
         desiredCapabilities.setCapability("appActivity", "de.danoeh.antennapod.activity.MainActivity");
         desiredCapabilities.setCapability("app",
                 getAbsolutePath("src/test/resources/AntennaPod_2.7.1_Apkpure.apk"));
-        desiredCapabilities.setCapability("acceptInsecureCerts", true);
 
         return new AndroidDriver(getAppiumServerUrl(), desiredCapabilities);
     }

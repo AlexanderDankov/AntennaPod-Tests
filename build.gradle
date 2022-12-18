@@ -28,7 +28,7 @@ dependencies {
             'io.appium:java-client:7.3.0',
             'io.rest-assured:rest-assured:5.2.0',
             "org.aeonbits.owner:owner:1.0.12",
-            "org.junit.jupiter:junit-jupiter-api:$junitVersion")
+            "org.junit.jupiter:junit-jupiter:$junitVersion")
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
 }
 
