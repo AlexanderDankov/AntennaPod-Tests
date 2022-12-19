@@ -19,6 +19,9 @@ https://f-droid.org/repo/de.danoeh.antennapod_2070195.apk
 gradle clean test -DdeviceHost=emulator
 ```
 
+### Passed test video:
+<img src="img/Passed test.gif">
+
 ### Allure Report:
 ![image](https://user-images.githubusercontent.com/49765744/208319208-4d4b6067-f5eb-4e70-bad9-c7c09afb69a4.png)
 
